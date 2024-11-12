@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:blocs_app/main.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
