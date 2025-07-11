@@ -37,10 +37,27 @@ class RouterSimpleCubit extends Cubit<GoRouter> {
   RouterSimpleCubit() : super(_publicRouter);
 
   void goBack() {
-    state.pop();
+    if (state.canPop()) {
+      state.pop();
+    }
   }
 
   void goHome() {
     state.go('/');
   }
+
+  void goToRoute(String route) {
+    state.go(route);
+  }
+
+  void pushRoute(String route) {
+    state.push(route);
+  }
+
+  void replaceRoute(String route) {
+    state.pushReplacement(route);
+  }
+
+  String get currentLocation =>
+      state.routerDelegate.currentConfiguration.uri.toString();
 }

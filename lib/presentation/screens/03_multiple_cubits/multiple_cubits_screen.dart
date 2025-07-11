@@ -19,9 +19,7 @@ class MultipleCubitScreen extends StatelessWidget {
       body: Center(
           child: Column(
         children: [
-          const Spacer(
-            flex: 1,
-          ),
+          const Spacer(),
           IconButton(
             icon: themeCubit.state.isDarkMode
                 ? const Icon(Icons.dark_mode_outlined, size: 100)

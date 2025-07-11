@@ -13,7 +13,7 @@ class ThemeCubit extends Cubit<ThemeState> {
   }
 
   void setDarkMode(bool isDarkMode) {
-    emit(const ThemeState(isDarkMode: true));
+    emit(ThemeState(isDarkMode: isDarkMode));
   }
 
   void setLightMode() {
